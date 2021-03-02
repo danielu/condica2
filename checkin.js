@@ -30,20 +30,17 @@ const url = process.env.CHECKIN_URL;
 	await driver.sleep(500)
 	await driver.findElement(By.css('div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div.freebirdFormviewerViewNavigationLeftButtons > div')).sendKeys(Key.ENTER)
 
-	let el = await driver.findElement(By.xpath("//div[text()='Locul de desfasurare a activitatii']"));
+	let el = await driver.findElement(By.xpath("//div[text()='Orar de activitate si locul de desfasurare a activitatii']"));
 	await driver.wait(until.elementIsVisible(el), 1000);
 	await driver.sleep(500)
-	await driver.findElement(By.css('div.freebirdFormviewerComponentsQuestionRadioRoot > div:nth-child(2) > div > span > div > div:nth-child(1) > label')).click()
-	await driver.sleep(1000)
-	await driver.findElement(By.css('div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div > div:nth-child(2)')).sendKeys(Key.ENTER)
-	let el2 = await driver.findElement(By.xpath("//div[text()='Orar de activitate']"));
-	await driver.wait(until.elementIsVisible(el2),1000);
-	await driver.findElement(By.css('div.freebirdFormviewerComponentsQuestionTimeRoot > div > div:nth-child(1) > div.quantumWizTextinputPaperinputEl.freebirdFormviewerComponentsQuestionTimeTimeInput.freebirdThemedInput.freebirdThemedInputDarkerDisabled.freebirdFormviewerComponentsQuestionTimeInput.modeLight > div.quantumWizTextinputPaperinputMainContent.exportContent > div > div.quantumWizTextinputPaperinputInputArea > input')).sendKeys('08');		
+	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(3) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
 	await driver.sleep(500)
-	await driver.findElement(By.css('div.freebirdFormviewerComponentsQuestionTimeRoot > div > div:nth-child(3) > div > div.quantumWizTextinputPaperinputMainContent.exportContent > div > div.quantumWizTextinputPaperinputInputArea > input')).sendKeys('00');		
+	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(4) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
+	await driver.sleep(500)
+	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(5) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
 	await driver.sleep(500)
 	await driver.findElement(By.css('div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div > div:nth-child(2)')).sendKeys(Key.ENTER)
-	
+		
 	await driver.sleep(2000)
 	
 	await driver.get(url);
@@ -64,20 +61,19 @@ const url = process.env.CHECKIN_URL;
 	await driver.sleep(500)
 	await driver.findElement(By.css('div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div.freebirdFormviewerViewNavigationLeftButtons > div')).sendKeys(Key.ENTER)
 
-	let elz = await driver.findElement(By.xpath("//div[text()='Locul de desfasurare a activitatii']"));
-	await driver.wait(until.elementIsVisible(elz),1000);
+	let el = await driver.findElement(By.xpath("//div[text()='Orar de activitate si locul de desfasurare a activitatii']"));
+	await driver.wait(until.elementIsVisible(el), 1000);
 	await driver.sleep(500)
-	await driver.findElement(By.css('div.freebirdFormviewerComponentsQuestionRadioRoot > div:nth-child(2) > div > span > div > div:nth-child(1) > label')).click()
-	await driver.sleep(1000)
+	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(3) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
+	await driver.sleep(500)
+	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(4) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
+	await driver.sleep(500)
+	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(5) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
+	await driver.sleep(500)
 	await driver.findElement(By.css('div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div > div:nth-child(2)')).sendKeys(Key.ENTER)
-	let el2z = await driver.findElement(By.xpath("//div[text()='Orar de activitate']"));
-	await driver.wait(until.elementIsVisible(el2z),1000);
-	await driver.findElement(By.css('div.freebirdFormviewerComponentsQuestionTimeRoot > div > div:nth-child(1) > div.quantumWizTextinputPaperinputEl.freebirdFormviewerComponentsQuestionTimeTimeInput.freebirdThemedInput.freebirdThemedInputDarkerDisabled.freebirdFormviewerComponentsQuestionTimeInput.modeLight > div.quantumWizTextinputPaperinputMainContent.exportContent > div > div.quantumWizTextinputPaperinputInputArea > input')).sendKeys('08');		
-	await driver.sleep(500)
-	await driver.findElement(By.css('div.freebirdFormviewerComponentsQuestionTimeRoot > div > div:nth-child(3) > div > div.quantumWizTextinputPaperinputMainContent.exportContent > div > div.quantumWizTextinputPaperinputInputArea > input')).sendKeys('00');		
-	await driver.sleep(500)
-	await driver.findElement(By.css(' div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div > div:nth-child(2)')).sendKeys(Key.ENTER)
-	await driver.sleep(3000)
+		
+	await driver.sleep(2000)
+	
 	
   } catch(e) {
 	console.log("err", e)
