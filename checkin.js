@@ -37,8 +37,8 @@ const url = process.env.CHECKIN_URL;
 	await driver.sleep(500)
 	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(4) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
 	await driver.sleep(500)
-	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(5) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
-	await driver.sleep(500)
+	/*await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(5) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
+	await driver.sleep(500)*/
 	await driver.findElement(By.css('div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div > div:nth-child(2)')).sendKeys(Key.ENTER)
 		
 	await driver.sleep(2000)
@@ -68,8 +68,8 @@ const url = process.env.CHECKIN_URL;
 	await driver.sleep(500)
 	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(4) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
 	await driver.sleep(500)
-	await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(5) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
-	await driver.sleep(500)
+	/*await driver.findElement(By.css('div.freebirdFormviewerViewItemList > div:nth-child(5) > div > div > div.freebirdFormviewerComponentsQuestionRadioRoot > div > div > span > div > div:nth-child(1) > label')).click()
+	await driver.sleep(500)*/
 	await driver.findElement(By.css('div.freebirdFormviewerViewNavigationNavControls > div.freebirdFormviewerViewNavigationButtonsAndProgress > div > div:nth-child(2)')).sendKeys(Key.ENTER)
 		
 	await driver.sleep(2000)
@@ -78,7 +78,7 @@ const url = process.env.CHECKIN_URL;
   } catch(e) {
 	console.log("err", e)
   }finally {
-    driver.quit();
+    //driver.quit();
   }
 
 }());
